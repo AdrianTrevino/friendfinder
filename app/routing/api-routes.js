@@ -14,7 +14,7 @@ module.exports = function(app){
 
 
 	app.post('/api/friends', function(req, res){
-
+		console.log("post route reached");
 		var greatMatch = {
 			name: "",
 			image: "",
@@ -30,7 +30,7 @@ module.exports = function(app){
 		//loop through the friends data array of objects to get each friends scores
 		for(var i = 0; i < [friends].length-1; i++){
 			console.log(friends[i].name);
-			totalDifference = 0;
+			totalDifference = 1000;
 
 			//logic for calculating differences in scores
 			for(var j = 0; j < 10; j++){

@@ -35,7 +35,7 @@
 		<h3><strong>Question 1</strong></h3>
 		<h4>You enjoy meeting new people</h4>
 	 	<select data-placeholder="" class="chosen-select" id="q1">
-	 		<option value=""></option>
+	 		<option value="0"></option>
             <option value="1">1 (Strongly Disagree)</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -227,6 +227,7 @@
 	    	var currentURL = window.location.origin;
 	    	// AJAX post the data to the friends API. 
 	    	$.post(currentURL + "/api/friends", userData, function(data){
+				console.log(data);
 	    		$("#matchName").text(data.name);
 	    		$('#matchImg').attr("src", data.photo);
 		    	// Show the modal with the best match 
